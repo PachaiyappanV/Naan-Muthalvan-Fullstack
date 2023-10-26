@@ -1,0 +1,33 @@
+/* Your existing CSS here */
+
+.features {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 14px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>User Login Form</title>
+    <style>
+        *{
+            font-family: inherit;
+        }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        #userInfoForm {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 47%;
+            padding: 10px;
+            background-color:whitesmoke;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+            font-size:medium;
+    
+        }
+        button:hover {
+            background-color: goldenrod;
+        }
+        #displayUserInfo {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Login Form</h1>
+    <form id="userInfoForm">
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <div id="displayUserInfo"></div>
+
+    <script>
+        document.getElementById('userInfoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            
+            var displayArea = document.getElementById('displayUserInfo');
+            displayArea.innerHTML = `
+                <h2>User Information:</h2>
+                <p><strong>Username:</strong> ${username}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Password:</strong> ${password}</p>
+            `;
+        });
+    </script>
+</body>
+</html>
